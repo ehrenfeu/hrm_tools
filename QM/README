@@ -1,0 +1,7 @@
+This is the new event-driven Queue Manager for the Huygens Remote Manager.
+
+Communication from the QueueManager (Tcl) to PHP occurs through POSTs to
+the apache web server. Communication from PHP to the QueueManager (Tcl)
+occurs through socket connection on a predefined port.
+
+TODO Add more detailed description.
