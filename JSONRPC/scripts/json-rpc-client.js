@@ -13,8 +13,8 @@
  *                                   params: [ 'param1', 'param2', ... ]
  *                                 }
  *                                 
- * @param {function} callback  Function to be called to preocess the returned
- *                             response; in the form:
+ * @param {function} callback  Function to be called to process the returned
+ *                             response, in the form:
  *                             
  *                                 function(response) { ... }
  * 
