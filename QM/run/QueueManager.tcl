@@ -295,7 +295,7 @@ proc readFromClientCB { clientId } {
 # We'll keep the sockets unidirectional (client->server) as the server->client
 # messages are redirected via POST. Still add this callback for when the
 # server-client direction has to be used. Moreover, it seems that the client
-# does a need a callback for completness sake.
+# does need a callback for completness sake.
 proc writeToClientCB { clientId } {
     variable ioP
 
