@@ -34,8 +34,8 @@ class LSBReleaseApp(gc3libs.Application):
             inputs = [],                   # mandatory
             outputs = [],                  # mandatory
             output_dir = "./lsbrelease",  # mandatory
-            stderr = 'stderr.txt',
-            stdout = "stdout.txt",)
+            stderr = 'stdout.txt', # combine stdout & stderr
+            stdout = 'stdout.txt')
 
 # Create an instance of LSBReleaseApp
 app = LSBReleaseApp()
