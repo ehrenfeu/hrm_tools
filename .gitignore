@@ -1,1 +1,7 @@
 /nbproject/
+
+# vim swap files:
+.*.sw?
+
+# python bytecode:
+*.pyc
