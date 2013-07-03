@@ -31,8 +31,8 @@ class HucoreDeconvolveApplication(gc3libs.Application):
         gc3libs.Application.__init__(
             self,
             arguments = ["/usr/local/bin/hucore",
-                '-template', 'hrm_template_relative.tcl'],
-            inputs = ['./hrm_template_relative.tcl', 'bad.lsm'],
+                '-template', 'hucore_template_relative.tcl'],
+            inputs = ['./hucore_template_relative.tcl', 'bad.lsm'],
             outputs = ['resultdir', 'previews'],
             output_dir = './deconvolved',
             stderr = 'stdout.txt', # combine stdout & stderr
