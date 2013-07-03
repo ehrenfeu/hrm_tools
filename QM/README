@@ -4,4 +4,32 @@ Communication from the QueueManager (Tcl) to PHP occurs through POSTs to
 the apache web server. Communication from PHP to the QueueManager (Tcl)
 occurs through socket connection on a predefined port.
 
-TODO Add more detailed description.
+= NOTATION ================================================================================
+
+WAB   : Web-application backend
+QM    : Queue Manager
+HuCore: Huygens Core, processing tool
+
+= CURRENT QUEUE MANAGER ===================================================================
+
+- Written in PHP
+- One big for loop
+- 2-way communication WAB - QM via database updates
+- (Limited) communication QM - HuCore through shell pipes
+- QM keeps track of job queue (>= 1 server), with simple prioritization mechanism
+
+= EVENT-DRIVEN Tcl QUEUE MANAGER ==========================================================
+
+- Communication from QM (Tcl) to WAB (PHP) occurs through POSTs to
+  the apache web server. 
+- Communication from WAB to QM occurs through socket connection on
+  an admin-defined port. 
+- QM communicates with HuCore via persistent SSH pipes.
+- New queue management?
+
+Components:
+
+- QM: QueueManager.tcl communicates to WAB via POSTs and to HuCore via SSH pipes 
+  (host-agnostic).
+- WAB: collect.php -> Collector.php catches POSTs on port 80 from QM
+- WAB: Dispatcher.php communicates with QM vie socket connections (port configurable)
