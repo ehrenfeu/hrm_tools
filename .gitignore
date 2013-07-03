@@ -5,3 +5,6 @@
 
 # python bytecode:
 *.pyc
+
+# sample deconvolution data:
+bad.lsm
